@@ -1,0 +1,36 @@
+.nav {
+	background-color: #fff
+}
+
+.nav {
+	height: 60px;
+	color: #000;
+	font-weight: 700;
+	max-width: 1200px;
+	margin: 0 auto
+}
+
+.logo {
+	width: 40px;
+	padding: 10px 10px 10px 0;
+	float: left
+}
+
+.menu-item {
+	line-height: 60px;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 0;
+	text-decoration: none
+}
+
+.menu-item:hover,
+.menu-item:visited {
+	color: initial
+}
+
+@media only screen and (max-width:1200px) { /* it follows body max-width */
+	.nav {
+		padding: 0 15px; 
+	}
+}

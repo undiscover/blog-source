@@ -1,0 +1,23 @@
+.albums {
+	list-style: none;
+	font-weight: 700;
+	font-size: 16px;
+	padding-left: 0;
+	margin: 30px 0 0 0;
+}
+
+.album a { 
+	text-decoration: none;
+	color: black;
+}
+
+.album {
+	text-transform: uppercase;
+	margin-bottom: 15px;
+}
+
+@media only screen and (max-width:1200px) { /* it follows body max-width */
+	.albums {
+		padding: 0 15px; 
+	}
+}
