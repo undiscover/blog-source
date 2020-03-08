@@ -71,6 +71,10 @@
 	text-align: justify
 }
 
+.article p {
+	margin: 0;
+}
+
 .player {
 	width: 50%;
 	float: right;
@@ -98,5 +102,4 @@
 	.player {
 		width: 100%
 	}
-
 }

@@ -1,5 +1,6 @@
 import React from "react"  
 import { graphql } from "gatsby"
+import { Remarkable } from 'remarkable';
 
 import Layout from "./layout"
 import "../css/album.css"
@@ -24,6 +25,8 @@ export const query = graphql`
 
 const Album = ({ data }) => {  
 	const album = data.strapiAlbum
+	var md = new Remarkable()
+	
 	return (
 		<Layout>
 			<div className="hero" style={{ backgroundColor: album.background_color}}>
@@ -45,14 +48,10 @@ const Album = ({ data }) => {
 			</div>
 			<section className="article">
 				<section className="player" dangerouslySetInnerHTML={{__html: album.player}} />
-				<section>
-					{album.description}
-				</section>
+				<section dangerouslySetInnerHTML={{__html: md.render(album.description)}} />
 			</section>
 		</Layout>
 	)
 }
 
 export default Album
-
-
