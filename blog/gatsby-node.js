@@ -13,6 +13,7 @@ exports.createPages = async ({ graphql, actions }) => {
 			edges {
 			  node {
 				strapiId
+				slug
 			  }
 			}
 		  }
@@ -28,7 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
 	const albums = result.data.albums.edges
 	albums.forEach((album, index) => {
 	  createPage({
-		path: `/album/${album.node.strapiId}`,
+		path: `/${album.node.slug}`,
 		component: require.resolve("./src/components/album.js"),
 		context: {
 		  id: album.node.strapiId,

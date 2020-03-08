@@ -13,6 +13,7 @@ const Albums = () => (
 							node {
 								strapiId
 								name
+								slug
 								author
 								created_at
 								background_color
@@ -27,7 +28,7 @@ const Albums = () => (
 					let style = {color: album.background_color}
 					return (
 						<li className="album" key={album.strapiId}>
-							<Link to={`/album/${album.strapiId}`}>
+							<Link to={`/${album.slug}`}>
 								{album.author} <span style={style}> ― </span> {album.name}
 							</Link>
 						</li>

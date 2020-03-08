@@ -1,4 +1,5 @@
 'use strict';
+const slugify = require('slugify');
 
 /**
  * Lifecycle callbacks for the `album` model.
@@ -8,6 +9,17 @@ module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
   // beforeSave: async (model, attrs, options) => {},
+
+  beforeSave: async (model, attrs, options) => {
+
+    // This will create the slug
+    // see https://strapi.io/documentation/3.0.0-beta.x/guides/slug.html#auto-create-update-the-slug-attribute
+    if (options.method === 'insert' && attrs.name) {
+      model.set('slug', slugify(attrs.name.toLowerCase()));
+    } else if (options.method === 'update' && attrs.name) {
+      attrs.slug = slugify(attrs.name.toLowerCase());
+    }
+  },
 
   // After saving a value.
   // Fired after an `insert` or `update` query.

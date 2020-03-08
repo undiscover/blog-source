@@ -37,6 +37,10 @@
     },
     "release_year": {
       "type": "integer"
+    },
+    "slug": {
+      "type": "string",
+      "required": true
     }
   }
 }
