@@ -10,6 +10,9 @@ const Nav = () => (
 			<Link to={"/"} className="menu-item">
 				undiscover
 			</Link>
+			<Link to={"/info"} className="menu-item last small">
+				info
+			</Link>
 		</div>
 	</div>
 )

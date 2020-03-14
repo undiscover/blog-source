@@ -16,12 +16,27 @@
 	float: left
 }
 
+.menu {
+	display: flex;
+}
+
 .menu-item {
 	line-height: 60px;
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 0;
-	text-decoration: none
+	text-decoration: none;
+	color: initial
+}
+
+.menu-item.last {
+	margin-left: auto;
+}
+
+.menu-item.small {
+	font-weight: normal;
+	text-transform: none;
+	font-size: 16px;
 }
 
 .menu-item:hover,

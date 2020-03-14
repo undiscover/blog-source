@@ -20,20 +20,20 @@ exports.createPages = async ({ graphql, actions }) => {
 		}
 	  `
 	)
-  
+
 	if (result.errors) {
 	  throw result.errors
 	}
-  
+
 	// Create albums pages.
 	const albums = result.data.albums.edges
 	albums.forEach((album, index) => {
-	  createPage({
-		path: `/${album.node.slug}`,
-		component: require.resolve("./src/components/album.js"),
-		context: {
-		  id: album.node.strapiId,
-		},
-	  })
+		createPage({
+			path: `/${album.node.slug}`,
+			component: require.resolve("./src/components/album.js"),
+			context: {
+				id: album.node.strapiId,
+			},
+		})
 	})
-  }
+}

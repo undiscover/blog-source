@@ -1,0 +1,19 @@
+.info-content {
+	margin: 15px auto;
+	text-align: justify;
+}
+
+.content-404 a,
+.content-404 a:visited {
+	color: initial;
+}
+
+.content-404 a:hover {
+	color: initial;
+}
+
+@media only screen and (max-width:1200px) { /* it follows body max-width */
+	.content-404{
+		padding: 0 15px;
+	}	
+}
