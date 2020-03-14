@@ -48,7 +48,7 @@ const Album = ({ data }) => {
 			</div>
 			<section className="article">
 				<section className="player" dangerouslySetInnerHTML={{__html: album.player}} />
-				<section dangerouslySetInnerHTML={{__html: md.render(album.description)}} />
+				<section className="description" dangerouslySetInnerHTML={{__html: md.render(album.description)}} />
 			</section>
 		</Layout>
 	)

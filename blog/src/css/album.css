@@ -81,6 +81,21 @@
 	padding: 0 0 0 30px;
 }
 
+.description ul {
+	padding: 0;
+	list-style: square;
+	list-style-position: inside;
+}
+
+.description a,
+.description a:visited {
+	color: initial;
+}
+
+.description a:hover {
+	color: initial;
+}
+
 @media only screen and (max-width:1200px) { /* it follows body max-width */
 	.article {
 		padding: 30px 20px; 

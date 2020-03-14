@@ -25,11 +25,11 @@ const Albums = () => (
 			render={data =>
 				data.allStrapiAlbum.edges.map((data) => {
 					let album = data.node
-					let style = {color: album.background_color}
+					let style = {backgroundColor: album.background_color}
 					return (
 						<li className="album" key={album.strapiId}>
 							<Link to={`/${album.slug}`}>
-								{album.author} <span style={style}> ― </span> {album.name}
+								{album.author} <span className="hyphen" style={style}></span> {album.name}
 							</Link>
 						</li>
 					)
