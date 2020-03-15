@@ -3,6 +3,19 @@ import { Link, StaticQuery, graphql } from "gatsby"
 
 import "../css/albums.css"
 
+function formatDate(date) {
+	return (new Date(date)).toLocaleString('it-IT', { year: 'numeric', month: 'long', day: 'numeric'})
+}
+
+function getEmoji(length) {
+	let emoji = []
+	for (let i = 0; i < Math.floor(length / 10); i++) {
+		emoji.push(<span style={{fontSize: "8px"}} role="img" aria-label="headphone icon">🎧 </span>)
+	}
+	return emoji
+}
+
+
 const Albums = () => (
 	<ul className="albums">
 		<StaticQuery
@@ -15,8 +28,9 @@ const Albums = () => (
 								name
 								slug
 								author
-								created_at
+								length
 								background_color
+								created_at
 							}
 						}
 					}
@@ -30,6 +44,9 @@ const Albums = () => (
 						<li className="album" key={album.strapiId}>
 							<Link to={`/${album.slug}`}>
 								{album.author} <span className="hyphen" style={style}></span> {album.name}
+								<span className="album-info">
+									aggiunto il {formatDate(album.created_at)} | ascolto di {album.length} minuti {getEmoji(album.length)}
+								</span>
 							</Link>
 						</li>
 					)

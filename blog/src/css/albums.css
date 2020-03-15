@@ -1,29 +1,39 @@
 .albums {
-	list-style: none;
-	font-size: 16px;
-	padding-left: 0;
-	margin: 15px 0 0 0;
+	list-style: square;
+    font-size: 16px;
+    padding-left: 15px;
+    margin: 15px 0 0 0;
 }
 
 .album a { 
 	text-decoration: none;
 	color: black;
+	display: block;
 }
 
 .album {
-	text-transform: uppercase;
 	margin-bottom: 15px;
+}
+
+.album:hover .album-info {
+	color: rgba(0, 0 ,0);
+}
+
+.album-info {
+	font-size: 12px;
+	color: rgba(0, 0 ,0, 0.5);
+	display: block;
 }
 
 .hyphen {
 	height: 5px;
 	width: 20px;
 	display: inline-block;
-	margin: 0 5px 3px 5px;
+	margin: 2px;
 }
 
 @media only screen and (max-width:1200px) { /* it follows body max-width */
 	.albums {
-		padding: 0 15px; 
+		padding: 0 30px; 
 	}
 }
