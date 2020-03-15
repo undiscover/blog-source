@@ -40,6 +40,10 @@
     },
     "slug": {
       "type": "string",
+      "required": false
+    },
+    "length": {
+      "type": "integer",
       "required": true
     }
   }
