@@ -28,7 +28,7 @@ module.exports = {
 			resolve: `gatsby-plugin-google-fonts`,
 			options: {
 				fonts: [
-					`lato: 300,300i,400,400i,700,700i`,
+					`courier prime: 300,300i,400,400i,700,700i`,
 				],
 				display: 'swap'
 			}
