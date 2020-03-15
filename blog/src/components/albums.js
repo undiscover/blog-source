@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
+import SEO from "../components/seo"
 import "../css/albums.css"
 
 function formatDate(date) {
@@ -18,6 +19,7 @@ function getEmoji(length) {
 
 const Albums = () => (
 	<ul className="albums">
+		<SEO title="Albuls"/>
 		<StaticQuery
 			query={graphql`
 				query {

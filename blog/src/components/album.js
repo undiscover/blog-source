@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 import { Remarkable } from 'remarkable';
 
 import Layout from "./layout"
+import SEO from "../components/seo"
+
 import "../css/album.css"
 
 export const query = graphql`
@@ -29,6 +31,7 @@ const Album = ({ data }) => {
 	
 	return (
 		<Layout>
+			<SEO title={[album.name, album.author].join(' | ')}/>
 			<div className="hero" style={{ backgroundColor: album.background_color}}>
 				<div className="hero-content">
 					<div className="band-details">
