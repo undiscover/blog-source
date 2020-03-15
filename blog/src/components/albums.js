@@ -19,7 +19,7 @@ function getEmoji(length) {
 
 const Albums = () => (
 	<ul className="albums">
-		<SEO title="Albuls"/>
+		<SEO title="Albums"/>
 		<StaticQuery
 			query={graphql`
 				query {
