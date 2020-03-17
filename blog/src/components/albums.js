@@ -23,7 +23,7 @@ const Albums = () => (
 		<StaticQuery
 			query={graphql`
 				query {
-					allStrapiAlbum {
+					allStrapiAlbum(sort: {fields: [created_at], order: DESC}) {
 						edges {
 							node {
 								strapiId
