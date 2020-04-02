@@ -10,9 +10,14 @@ const Nav = () => (
 			<Link to={"/"} className="menu-item">
 				undiscover
 			</Link>
-			<Link to={"/info"} className="menu-item last small">
-				info
-			</Link>
+			<div className="menu-section last">
+				<a href={"https://mirra.live/rzFKFqLGV"} className="menu-item small">
+					Mirra
+				</a>
+				<Link to={"/info"} className="menu-item small last">
+					info
+				</Link>
+			</div>
 		</div>
 	</div>
 )

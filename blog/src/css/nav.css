@@ -20,17 +20,22 @@
 	display: flex;
 }
 
+.menu-section.last {
+	margin-left: auto;
+}
+
 .menu-item {
 	line-height: 60px;
 	font-size: 18px;
 	text-transform: uppercase;
 	padding: 0;
 	text-decoration: none;
-	color: initial
+	color: initial;
+	margin-right: 16px;
 }
 
 .menu-item.last {
-	margin-left: auto;
+	margin-right: 0;
 }
 
 .menu-item.small {
